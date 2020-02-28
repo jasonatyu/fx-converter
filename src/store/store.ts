@@ -7,7 +7,7 @@ let middleware = [thunk, logger]
 if (process.env.NODE_ENV !== 'production') {
     middleware = [...middleware];
 } else {
-    middleware = [];
+    middleware = [thunk];
 }
 
 const configureStore = (preloadedState = {}) =>
