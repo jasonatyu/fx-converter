@@ -19,6 +19,7 @@ code {
   padding: 20px;
   display: flex;
   height: 80vh;
+  position: relative;
 }
 
 .fx-input {
@@ -95,19 +96,16 @@ select {
   width: 100%;
 }
 
+.chart-container {
+  height: 100%;
+  width: 100%;
+}
+
 .result-container {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.chart {
-  padding: 5px;
-}
-
-.chart-container {
-  display: flex;
 }
 
 .errors {
@@ -124,6 +122,13 @@ select {
   list-style: none;
   text-align: center;
   padding: 0px;
+}
+
+#disclosure {
+  position: absolute;
+  bottom: 2px;
+  left: 20px;
+  font-size: 12px;
 }
 
 

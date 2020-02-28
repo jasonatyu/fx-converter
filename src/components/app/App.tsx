@@ -11,6 +11,7 @@ const App: React.FC<{}> = () => (
         <ResultContainer />
         <TimeSeriesContainer />
       </div>
+      <p id="disclosure">Data provided by <a href="https://www.alphavantage.co/">alphavantage</a>​</p>
     </div>
   </div>
 )
