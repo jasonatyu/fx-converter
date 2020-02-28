@@ -8,6 +8,7 @@ type TimeSeriesState = {
 
 type TimeSeriesProps = {
     currentTimeSeries: any, 
+    isLoading: boolean
 }
 
 export class TimeSeries extends Component<TimeSeriesProps, TimeSeriesState> {
@@ -20,7 +21,7 @@ export class TimeSeries extends Component<TimeSeriesProps, TimeSeriesState> {
     }
 
     render() {
-        if (Object.keys(this.props.currentTimeSeries).length !== 0) {
+        if (Object.keys(this.props.currentTimeSeries).length !== 0 && !this.props.isLoading) {
             const series = Object.entries(this.props.currentTimeSeries).map((unit: any) => ({ "x" : unit[0], "y" : parseFloat(unit[1]["4. close"])})).slice(0,30).reverse();
             return (
                 <div className="chart-container">

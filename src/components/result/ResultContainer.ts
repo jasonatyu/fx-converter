@@ -12,7 +12,8 @@ const mapStateToProps = ({ entities, ui }) => {
         currentSelectionId,
         currentSelectionInfo: entities.fxInfo[currentSelectionId] || [],
         currentResult: entities.fx[currentSelectionId] || 0,
-        currentAmount: ui.filters.currentAmount || 0
+        currentAmount: ui.filters.currentAmount || 0,
+        isLoading: ui.filters.isLoading
     };
 };
 

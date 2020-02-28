@@ -12,7 +12,8 @@ const mapStateToProps = ({ entities, ui }) => {
     return {
         currentSelectionId,
         currentFx: entities.fxInfo[currentSelectionId] || [],
-        currentTimeSeries: entities.timeSeries[currentSelectionId] || {}
+        currentTimeSeries: entities.timeSeries[currentSelectionId] || {},
+        isLoading: ui.filters.isLoading
     };
 };
 

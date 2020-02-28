@@ -59,8 +59,11 @@ export class Form extends Component<FormProps, FormState> {
             const amount = this.state.amount;
             if (!this.props.fx.includes(base + target) || !this.props.timeSeries.includes(base + target)) {
                 this.props.isLoading(true);
-                this.props.fetchFXRate(base, target); 
-                this.props.fetchHistoricalRates(base, target).then(() => this.props.isLoading(false));
+                const fetchFXRate = this.props.fetchFXRate(base, target); 
+                const fetchHistoricalRates = this.props.fetchHistoricalRates(base, target)
+                Promise.all([fetchFXRate, fetchHistoricalRates]).then((responses) => {
+                    this.props.isLoading(false);
+                });
             }
             this.props.receiveSelection(base+target);
             this.props.receiveAmount(amount);
