@@ -13,7 +13,7 @@ type TimeSeriesProps = {
 
 export class TimeSeries extends Component<TimeSeriesProps, TimeSeriesState> {
 
-    constructor(props) {
+    constructor(props: TimeSeriesProps) {
         super(props);
         this.state = {
             data: []

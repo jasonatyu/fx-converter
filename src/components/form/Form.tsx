@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, FormEvent } from 'react';
 
 type FormState = {
     baseCurrency?: string, 
@@ -39,7 +39,7 @@ export class Form extends Component<FormProps, FormState> {
         });
     }
 
-    checkValidNumber(input) {
+    checkValidNumber(input: any) {
         if (isNaN(input)) {
             //not a valid number 
             this.props.receiveErrors(["Please enter a valid number"])
@@ -49,7 +49,7 @@ export class Form extends Component<FormProps, FormState> {
         }
     }
 
-    handleSubmit(e) {
+    handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         this.props.clearErrors();
         this.props.clearSelection();
