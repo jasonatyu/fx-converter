@@ -8,7 +8,6 @@ type TimeSeriesState = {
 
 type TimeSeriesProps = {
     currentTimeSeries: any, 
-
 }
 
 export class TimeSeries extends Component<TimeSeriesProps, TimeSeriesState> {

@@ -7,6 +7,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const CLEAR_SELECTION = 'CLEAR_SELECTION';
 export const RECEIVE_SELECTION = 'RECEIVE_SELECTION';
+export const IS_LOADING = 'IS_LOADING'
 
 export const receiveFXRate = (payload) => ({
     type: RECEIVE_FX_RATE,
@@ -40,6 +41,11 @@ export const receiveSelection = (id) => ({
     type: RECEIVE_SELECTION,
     id
 });
+
+export const isLoading = (boolean) => ({
+    type: IS_LOADING,
+    boolean 
+})
 
 export const fetchFXRate = (base, target) => dispatch => (
     APIUtil.fetchFXRate(base, target).then(payload => {

@@ -14,6 +14,8 @@ type FormProps = {
     fetchHistoricalRates: Function,
     receiveSelection: Function,
     receiveAmount: Function,
+    isLoading: Function,
+    loading: boolean,
     errors: Array<string>,
     fx: any, 
     timeSeries: any
@@ -55,11 +57,10 @@ export class Form extends Component<FormProps, FormState> {
             const base = this.state.baseCurrency || "";
             const target = this.state.targetCurrency || "";
             const amount = this.state.amount;
-            if (!this.props.fx.includes(base+target)) {
-                this.props.fetchFXRate(base, target); //only fetch is not in store
-            }
-            if (!this.props.timeSeries.includes(base + target)) {
-                this.props.fetchHistoricalRates(base, target); //only fetch is not in store
+            if (!this.props.fx.includes(base + target) || !this.props.timeSeries.includes(base + target)) {
+                this.props.isLoading(true);
+                this.props.fetchFXRate(base, target); 
+                this.props.fetchHistoricalRates(base, target).then(() => this.props.isLoading(false));
             }
             this.props.receiveSelection(base+target);
             this.props.receiveAmount(amount);
@@ -424,7 +425,7 @@ export class Form extends Component<FormProps, FormState> {
                                         onChange={this.update('amount')}
                                     />
                             </div>
-                            <input className="submit" type="submit" value="Convert" />
+                            <input className="submit" type="submit" value={this.props.loading ? "Wait..." : "Convert"} />
                         </div>
                     </div>
                 </form>

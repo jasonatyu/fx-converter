@@ -2,10 +2,11 @@ import {
     RECEIVE_FX_RATE,
     RECEIVE_AMOUNT,
     CLEAR_SELECTION,
-    RECEIVE_SELECTION
+    RECEIVE_SELECTION,
+    IS_LOADING
 } from '../actions/fx_actions';
 
-const filterReducer = (state={}, action) => {
+const filterReducer = (state={isLoading: false}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_FX_RATE:
@@ -19,6 +20,8 @@ const filterReducer = (state={}, action) => {
             return Object.assign({}, state, { "currentAmount": action.amount })
         case RECEIVE_SELECTION:
             return Object.assign({}, state, { "currentSelection": action.id });
+        case IS_LOADING:
+            return Object.assign({}, state, { "isLoading": action.boolean });
         case CLEAR_SELECTION:
             return {};
         default:
