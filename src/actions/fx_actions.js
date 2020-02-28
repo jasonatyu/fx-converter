@@ -41,7 +41,6 @@ export const receiveSelection = (id) => ({
     id
 });
 
-
 export const fetchFXRate = (base, target) => dispatch => (
     APIUtil.fetchFXRate(base, target).then(payload => {
         if (payload.Note) {

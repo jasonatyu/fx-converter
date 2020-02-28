@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Form extends React.Component {
-    constructor(props) {
-        super(props);
+type FormState = {
+    baseCurrency?: string, 
+    targetCurrency?: string, 
+    amount?: number,
+}
+
+type FormProps = {
+    receiveErrors: Function,
+    clearErrors: Function,
+    clearSelection: Function,
+    fetchFXRate: Function,
+    fetchHistoricalRates: Function,
+    receiveSelection: Function,
+    receiveAmount: Function,
+    errors: Array<string>,
+    fx: any, 
+    timeSeries: any
+}
+
+export class Form extends Component<FormProps, FormState> {
+
+    constructor(props: FormProps) { 
+        super(props)
         this.state = {
-            baseCurrency: 'USD',
-            targetCurrency: 'EUR',
+            baseCurrency: "USD",
+            targetCurrency: "EUR",
             amount: 1
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
-    update(field) {
+    
+    update(field: any) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
@@ -32,8 +52,8 @@ class Form extends React.Component {
         this.props.clearErrors();
         this.props.clearSelection();
         if (this.checkValidNumber(this.state.amount)) {
-            const base = this.state.baseCurrency;
-            const target = this.state.targetCurrency;
+            const base = this.state.baseCurrency || "";
+            const target = this.state.targetCurrency || "";
             const amount = this.state.amount;
             if (!this.props.fx.includes(base+target)) {
                 this.props.fetchFXRate(base, target); //only fetch is not in store
@@ -69,7 +89,7 @@ class Form extends React.Component {
                         <br />
                         <div className="selection">
                         <label>From:</label>
-                            <select value={this.state.value} onChange={this.update('baseCurrency')}>
+                            <select value={this.state.baseCurrency} onChange={this.update('baseCurrency')}>
                                 <option value="AED">United Arab Emirates Dirham</option>
                                 <option value="AFN">Afghan Afghani</option>
                                 <option value="ALL">Albanian Lek</option>
@@ -233,7 +253,7 @@ class Form extends React.Component {
                         <br />
                         <div className="selection">
                         <label>To:</label>
-                            <select value={this.state.value} onChange={this.update('targetCurrency')}>
+                            <select value={this.state.targetCurrency} onChange={this.update('targetCurrency')}>
                                 <option value="AED">United Arab Emirates Dirham</option>
                                 <option value="AFN">Afghan Afghani</option>
                                 <option value="ALL">Albanian Lek</option>

@@ -1,7 +1,17 @@
-import React from 'react';
-import { VictoryChart, VictoryLine, VictoryTheme, VictoryAxis, VictoryLabel } from "victory";
+import React, { Component } from 'react';
+import { VictoryChart, VictoryLine, VictoryTheme, VictoryAxis } from "victory";
 
-class TimeSeries extends React.Component {
+
+type TimeSeriesState = {
+    data?: Array<any>
+}
+
+type TimeSeriesProps = {
+    currentTimeSeries: any, 
+
+}
+
+export class TimeSeries extends Component<TimeSeriesProps, TimeSeriesState> {
 
     constructor(props) {
         super(props);
@@ -12,10 +22,10 @@ class TimeSeries extends React.Component {
 
     render() {
         if (Object.keys(this.props.currentTimeSeries).length !== 0) {
-            const series = Object.entries(this.props.currentTimeSeries).map((unit) => ({ "x" : unit[0], "y" : parseFloat(unit[1]["4. close"])})).slice(0,30).reverse();
+            const series = Object.entries(this.props.currentTimeSeries).map((unit: any) => ({ "x" : unit[0], "y" : parseFloat(unit[1]["4. close"])})).slice(0,30).reverse();
             return (
                 <div className="chart-container">
-                    <VictoryChart className="chart" theme={VictoryTheme.material} style={{ parent: { width: "100%", maxWidth: "480px" } }}>
+                    <VictoryChart theme={VictoryTheme.material} style={{ parent: { width: "100%", maxWidth: "480px" } }}>
                         <VictoryAxis style={{ tickLabels: { fontSize: 10, padding: 1, angle: 45, verticalAnchor: 'middle', textAnchor: 'start' } }} fixLabelOverlap={true}/>
                         <VictoryAxis
                             dependentAxis
