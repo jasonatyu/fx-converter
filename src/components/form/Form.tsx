@@ -92,7 +92,7 @@ export class Form extends Component<FormProps, FormState> {
                     <div className="conversion-form">
                         <br />
                         <div className="selection">
-                        <label>From:</label>
+                            <label>From ➡️</label>
                             <select value={this.state.baseCurrency} onChange={this.update('baseCurrency')}>
                                 <option value="AED">United Arab Emirates Dirham</option>
                                 <option value="AFN">Afghan Afghani</option>
@@ -256,7 +256,7 @@ export class Form extends Component<FormProps, FormState> {
                         <br />
                         <br />
                         <div className="selection">
-                        <label>To:</label>
+                            <label>To ⬅️</label>
                             <select value={this.state.targetCurrency} onChange={this.update('targetCurrency')}>
                                 <option value="AED">United Arab Emirates Dirham</option>
                                 <option value="AFN">Afghan Afghani</option>

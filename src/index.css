@@ -89,8 +89,8 @@ select {
 }
 
 #result {
-  font-size: 24px;
-  font-weight: 800px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .conversion-form {
