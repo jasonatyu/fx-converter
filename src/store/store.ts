@@ -5,10 +5,12 @@ import rootReducer from "../reducers/root_reducer";
 
 let middleware = [thunk, logger]
 if (process.env.NODE_ENV !== 'production') {
-    middleware = [...middleware]
+    middleware = [...middleware];
+} else {
+    middleware = [];
 }
 
 const configureStore = (preloadedState = {}) =>
-    createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger));
+    createStore(rootReducer, preloadedState, applyMiddleware(...middleware));
 
 export default configureStore;
