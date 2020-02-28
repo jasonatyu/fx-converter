@@ -48,6 +48,7 @@ code {
   font-weight: 500;
   border: 0px;
   border-radius: 3px;
+  margin-left: 10px;
 }
 
 .submit:hover {
@@ -73,7 +74,7 @@ select {
 }
 
 .header {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600px;
 }
 

@@ -98,13 +98,11 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="AFN">Afghan Afghani</option>
                                 <option value="ALL">Albanian Lek</option>
                                 <option value="AMD">Armenian Dram</option>
-                                <option value="ANG">Netherlands Antillean Guilder</option>
                                 <option value="AOA">Angolan Kwanza</option>
                                 <option value="ARS">Argentine Peso</option>
                                 <option value="AUD">Australian Dollar</option>
                                 <option value="AWG">Aruban Florin</option>
                                 <option value="AZN">Azerbaijani Manat</option>
-                                <option value="BAM">Bosnia-Herzegovina Convertible Mark</option>
                                 <option value="BBD">Barbadian Dollar</option>
                                 <option value="BDT">Bangladeshi Taka</option>
                                 <option value="BGN">Bulgarian Lev</option>
@@ -121,7 +119,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="CAD">Canadian Dollar</option>
                                 <option value="CDF">Congolese Franc</option>
                                 <option value="CHF">Swiss Franc</option>
-                                <option value="CLF">Chilean Unit of Account UF</option>
                                 <option value="CLP">Chilean Peso</option>
                                 <option value="CNH">Chinese Yuan Offshore</option>
                                 <option value="CNY">Chinese Yuan</option>
@@ -184,7 +181,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="MMK">Myanma Kyat</option>
                                 <option value="MNT">Mongolian Tugrik</option>
                                 <option value="MOP">Macanese Pataca</option>
-                                <option value="MRO">Mauritanian Ouguiya (pre-2018)</option>
                                 <option value="MRU">Mauritanian Ouguiya</option>
                                 <option value="MUR">Mauritian Rupee</option>
                                 <option value="MVR">Maldivian Rufiyaa</option>
@@ -209,7 +205,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="RON">Romanian Leu</option>
                                 <option value="RSD">Serbian Dinar</option>
                                 <option value="RUB">Russian Ruble</option>
-                                <option value="RUR">Old Russian Ruble</option>
                                 <option value="RWF">Rwandan Franc</option>
                                 <option value="SAR">Saudi Riyal</option>
                                 <option value="SBDf">Solomon Islands Dollar</option>
@@ -217,7 +212,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="SDG">Sudanese Pound</option>
                                 <option value="SEK">Swedish Krona</option>
                                 <option value="SGD">Singapore Dollar</option>
-                                <option value="SHP">Saint Helena Pound</option>
                                 <option value="SLL">Sierra Leonean Leone</option>
                                 <option value="SOS">Somali Shilling</option>
                                 <option value="SRD">Surinamese Dollar</option>
@@ -238,15 +232,7 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="UYU">Uruguayan Peso</option>
                                 <option value="UZS">Uzbekistan Som</option>
                                 <option value="VND">Vietnamese Dong</option>
-                                <option value="VUV">Vanuatu Vatu</option>
                                 <option value="WST">Samoan Tala</option>
-                                <option value="XAF">CFA Franc BEAC</option>
-                                <option value="XAG">Silver Ounce</option>
-                                <option value="XAU">Gold Ounce</option>
-                                <option value="XCD">East Caribbean Dollar</option>
-                                <option value="XDR">Special Drawing Rights</option>
-                                <option value="XOF">CFA Franc BCEAO</option>
-                                <option value="XPF">CFP Franc</option>
                                 <option value="YER">Yemeni Rial</option>
                                 <option value="ZAR">South African Rand</option>
                                 <option value="ZMW">Zambian Kwacha</option>
@@ -262,13 +248,11 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="AFN">Afghan Afghani</option>
                                 <option value="ALL">Albanian Lek</option>
                                 <option value="AMD">Armenian Dram</option>
-                                <option value="ANG">Netherlands Antillean Guilder</option>
                                 <option value="AOA">Angolan Kwanza</option>
                                 <option value="ARS">Argentine Peso</option>
                                 <option value="AUD">Australian Dollar</option>
                                 <option value="AWG">Aruban Florin</option>
                                 <option value="AZN">Azerbaijani Manat</option>
-                                <option value="BAM">Bosnia-Herzegovina Convertible Mark</option>
                                 <option value="BBD">Barbadian Dollar</option>
                                 <option value="BDT">Bangladeshi Taka</option>
                                 <option value="BGN">Bulgarian Lev</option>
@@ -285,7 +269,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="CAD">Canadian Dollar</option>
                                 <option value="CDF">Congolese Franc</option>
                                 <option value="CHF">Swiss Franc</option>
-                                <option value="CLF">Chilean Unit of Account UF</option>
                                 <option value="CLP">Chilean Peso</option>
                                 <option value="CNH">Chinese Yuan Offshore</option>
                                 <option value="CNY">Chinese Yuan</option>
@@ -348,7 +331,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="MMK">Myanma Kyat</option>
                                 <option value="MNT">Mongolian Tugrik</option>
                                 <option value="MOP">Macanese Pataca</option>
-                                <option value="MRO">Mauritanian Ouguiya (pre-2018)</option>
                                 <option value="MRU">Mauritanian Ouguiya</option>
                                 <option value="MUR">Mauritian Rupee</option>
                                 <option value="MVR">Maldivian Rufiyaa</option>
@@ -373,7 +355,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="RON">Romanian Leu</option>
                                 <option value="RSD">Serbian Dinar</option>
                                 <option value="RUB">Russian Ruble</option>
-                                <option value="RUR">Old Russian Ruble</option>
                                 <option value="RWF">Rwandan Franc</option>
                                 <option value="SAR">Saudi Riyal</option>
                                 <option value="SBDf">Solomon Islands Dollar</option>
@@ -381,7 +362,6 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="SDG">Sudanese Pound</option>
                                 <option value="SEK">Swedish Krona</option>
                                 <option value="SGD">Singapore Dollar</option>
-                                <option value="SHP">Saint Helena Pound</option>
                                 <option value="SLL">Sierra Leonean Leone</option>
                                 <option value="SOS">Somali Shilling</option>
                                 <option value="SRD">Surinamese Dollar</option>
@@ -402,15 +382,7 @@ export class Form extends Component<FormProps, FormState> {
                                 <option value="UYU">Uruguayan Peso</option>
                                 <option value="UZS">Uzbekistan Som</option>
                                 <option value="VND">Vietnamese Dong</option>
-                                <option value="VUV">Vanuatu Vatu</option>
                                 <option value="WST">Samoan Tala</option>
-                                <option value="XAF">CFA Franc BEAC</option>
-                                <option value="XAG">Silver Ounce</option>
-                                <option value="XAU">Gold Ounce</option>
-                                <option value="XCD">East Caribbean Dollar</option>
-                                <option value="XDR">Special Drawing Rights</option>
-                                <option value="XOF">CFA Franc BCEAO</option>
-                                <option value="XPF">CFP Franc</option>
                                 <option value="YER">Yemeni Rial</option>
                                 <option value="ZAR">South African Rand</option>
                                 <option value="ZMW">Zambian Kwacha</option>
