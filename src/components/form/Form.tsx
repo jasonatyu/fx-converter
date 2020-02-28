@@ -87,7 +87,7 @@ export class Form extends Component<FormProps, FormState> {
         return (
             <div className="form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1 className="header">Currency Converter</h1> 
+                    <h1 className="header">Currency Converter 💰</h1> 
                 <br />
                     <div className="conversion-form">
                         <br />

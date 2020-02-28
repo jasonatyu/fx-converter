@@ -20,6 +20,7 @@ code {
   display: flex;
   height: 80vh;
   position: relative;
+  background-color: lightgray;
 }
 
 .fx-input {
@@ -72,7 +73,7 @@ select {
 }
 
 .header {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600px;
 }
 
@@ -89,7 +90,7 @@ select {
 
 #result {
   font-size: 24px;
-  font-weight: 600px;
+  font-weight: 800px;
 }
 
 .conversion-form {
@@ -131,4 +132,12 @@ select {
   font-size: 12px;
 }
 
+a:link {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 
