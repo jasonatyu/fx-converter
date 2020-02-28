@@ -60,7 +60,7 @@ export class Form extends Component<FormProps, FormState> {
             if (!this.props.fx.includes(base + target) || !this.props.timeSeries.includes(base + target)) {
                 this.props.isLoading(true);
                 const fetchFXRate = this.props.fetchFXRate(base, target); 
-                const fetchHistoricalRates = this.props.fetchHistoricalRates(base, target)
+                const fetchHistoricalRates = this.props.fetchHistoricalRates(base, target);
                 Promise.all([fetchFXRate, fetchHistoricalRates]).then((responses) => {
                     this.props.isLoading(false);
                 });

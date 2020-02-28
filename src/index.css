@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.background {
+  position: relative;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,6 +25,7 @@ code {
   height: 80vh;
   position: relative;
   background-color: lightgray;
+  overflow: auto;
 }
 
 .fx-input {
@@ -128,9 +133,10 @@ select {
 
 #disclosure {
   position: absolute;
-  bottom: 2px;
+  bottom: -40px;
   left: 20px;
   font-size: 12px;
+  margin-left: 5px;
 }
 
 a:link {
@@ -142,3 +148,12 @@ a:visited {
   color: black;
 }
 
+@media only screen and (max-width: 600px) {
+  .fx-input {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .result-container {
+    margin-left: 0;
+  }
+}
